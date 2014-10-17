@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Geoinquiets - Icones Layar</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="shortcut icon" href="/logo/favicon.ico">
+        <!-- Ext resources -->
+        <link rel="stylesheet" type="text/css" href="estil.css">
+        <script type="text/javascript">
+            var icons = {
+                "1": "Paraje",
+                "2": "Río, arroyo, barranco",
+                "3": "Camino y cañada",
+                "4": "Aldea, lugar, anejo",
+                "6": "Capital de Término Municipal",
+                "7": "Topónimo puntual",
+                "10": "Término municipal",
+                "12": "Saliente costero",
+                "14": "Sierra",
+                "15": "Espacio natural",
+                "18": "Playa",
+                "25": "Isla, islote, escollo",
+                "29": "Embalse",
+                "34": "Puerto, muelle",
+                "46": "Capital > 100.000h (ciudad)",
+                "50": "Aeródromo, aeropuerto",
+                "51": "Estrecho, golfo, bahía",
+                "56": "Autopista, autovía, carretera",
+                "58": "FFCC",
+                "62": "Mar, océano"
+            };
+            function init() {
+                var table = document.getElementById("icones");
+                var tb = document.createElement("TBODY");
+                for(var i in icons) {
+                    var th = document.createElement("th");
+                    th.appendChild(document.createTextNode(""+i));
+                    var td = document.createElement("td");
+                    td.innerHTML = '<img src="56px/'+i+'.png"/>';
+                    var td2 = document.createElement("td");
+                    td2.appendChild(document.createTextNode(icons[i]));
+                    var td3 = document.createElement("td");
+                    td3.innerHTML = '<a href="56px/'+i+'.png" target="_blank">56px</a><br>';
+                    td3.innerHTML += '<a href="76px/'+i+'.png" target="_blank">76px</a><br>';
+                    td3.innerHTML += '<a href="110px/'+i+'.png" target="_blank">110px</a><br>';
+                    td3.innerHTML += '<a href="256px/'+i+'.png" target="_blank">256px</a>';
+                    var tr = document.createElement("tr");
+                    tr.appendChild(th);
+                    tr.appendChild(td);
+                    tr.appendChild(td3);
+                    tr.appendChild(td2);
+                    tb.appendChild(tr);
+                }
+                table.appendChild(tb);
+            }
+        </script>
+    </head>
+    <body onload="init()">
+    <h1>Geoinquiets - Icones Layar</h1>
+    <p>Conjunt d'icones lliures (<a href="http://creativecommons.org/licenses/by/3.0/deed.ca" target="_blank">CC-by 3.0 geoinquiets.cat</a>), creades per a la visualització a Layar del <a href="http://centrodedescargas.cnig.es/CentroDescargas/equipamiento.do?method=mostrarEquipamiento" target="_blank">Nomenclátor Geográfico Básico de España (provisional)</a>, un conjunt de quasi 800.000 topònims &copy; Instituto Geográfico Nacional. Podeu veure i baixar cada icona a la següent taula, o descarregar-vos-les totes <a href="icones.zip" target="_blank">en un únic ZIP</a> (2,3 MB).</p>
+    
+    <table id="icones">
+        <tr><th>ID</th><th>Icona</th><th>Enllaços</th><th>Descripció</th></tr>
+    </table>
+    </body>
+</html>
